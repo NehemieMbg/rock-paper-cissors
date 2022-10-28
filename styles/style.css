@@ -1,5 +1,14 @@
 body {
 	background-color: #292727;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* flex-direction: column; */
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
 }
 
 .title {
@@ -26,12 +35,18 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 200px;
 }
 
 button {
 	background: none;
 	border-style: none;
 	font-size: 100px;
+	transition: transform .1s; /* Animation */
+}
+
+button:hover {
+	transform: scale(1.1);
 }
 
 .btn {
@@ -66,8 +81,7 @@ button {
 	justify-content: space-around;
 	flex-direction: column;
 	background-color: #292727;
-	padding: 8px;
-	padding-bottom: 16px;
+	padding: 16px;
 	width: 500px;
 	height: 200px;
 	border: 3px rgba(255, 255, 255, 0.844) solid;
@@ -140,4 +154,26 @@ button {
 
 .round-result {
 	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+	left: 0;
+}
+
+.footer p {
+	color: white;
+	font-family: sans-serif;
+	background-color: #121111;
+	padding: 16px;
+	margin: 0;
+}
+
+.github {
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
 }
