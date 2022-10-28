@@ -1,0 +1,143 @@
+body {
+	background-color: #292727;
+}
+
+.title {
+	color: #f2f2f2;
+	font-family: anton;
+	font-size: 60px;
+	letter-spacing: 4px;
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.round {
+	font-family: Yanone Kaffeesatz;
+	color: orange;
+	font-size: 38px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 24px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+	background: none;
+	border-style: none;
+	font-size: 100px;
+}
+
+.btn {
+	display: flex;
+	justify-content: space-around;
+	gap: 80px;
+	max-width: 400px;
+	margin-bottom: 40px;
+}
+
+.rock h3, .paper h3, .scissors h3 {
+	color: white;
+	font-family: Yanone Kaffeesatz;
+	font-size: 25px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+.message {
+	color: white;
+	font-family: Yanone Kaffeesatz;
+	font-size: 22px;
+	text-align: center;
+	margin: 0;
+	padding: 6px 8px;
+	border-radius: 4px;
+}
+
+.score-panel {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: #292727;
+	padding: 8px;
+	padding-bottom: 16px;
+	width: 500px;
+	height: 200px;
+	border: 3px rgba(255, 255, 255, 0.844) solid;
+	border-radius: 8px;
+	margin-bottom: 40px;
+}
+
+.score-title {
+	font-family: Yanone Kaffeesatz;
+	color: #292727;
+	background-color: orange;
+	text-align: center;
+	font-size: 35px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 4px;
+	width: 100px;
+	height: 33px;
+}
+
+.choices-result {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* gap: 90px; */
+	padding: 4px 30px;
+	margin: 0;
+}
+
+.user h3, .computer h3 {
+	font-size: 60px;
+	padding: 0;
+	margin: 0;
+	height: 62px;
+}
+
+.round-result h3 {
+	font-family: Yanone Kaffeesatz;
+	color: white;
+	font-size: 35px;
+	padding: 0;
+	margin: 0;
+}
+
+.track-score {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	padding: 0px 20px;
+}
+
+.user-score, .computer-score {
+	font-family: Yanone Kaffeesatz;
+	font-size: 35px;
+	line-height: 50px;
+	color: white;
+	padding: 0;
+	padding-top: 10px;
+	margin: 0;
+}
+
+.user-score {
+	margin-right: 30px;
+	padding-left: 20px;
+}
+
+.five {
+	color: white;
+}
+
+.round-result {
+	text-align: center;
+}
