@@ -10,13 +10,14 @@ const revealBtn = document.querySelector('.reveal-btn')
 const endMessage = document.querySelector('.end-message')
 
 let result;
-let computerChoice;
-let userSelection;
-let player = 0;
-let ai = 0;
+let computerChoice; // Computer choice
+let userSelection; // Player choice
+let player = 0; // Player score
+let ai = 0; // Computer score
 
+// Function that reload the page & used as a point reset
 function reloadPage() {
-	location.reload()
+	location.reload();
 }
 restart.addEventListener('click', reloadPage);
 
@@ -69,36 +70,36 @@ function playRound(playerSelection, computerSelection) {
 	if (playerSelection === "rock" && computerSelection === "scissors") {
 		rdResult.innerText = 'You Win!';
 		message.innerText = `${playerSelection} beats ${computerSelection}.`;
-		usrScore.innerText = player += 1
+		usrScore.innerText = player += 1;
 	}
 	else if (playerSelection === "scissors" && computerSelection === "rock") {
 		rdResult.innerText = 'You Lose!';
 		message.innerText = `${computerSelection} beats ${playerSelection}.`;
-		cptScore.innerText = ai += 1
+		cptScore.innerText = ai += 1;
 	}
 
 	// Paper and Rock
 	else if (playerSelection === "paper" && computerSelection === "rock") {
 		rdResult.innerText = 'You Win!';
 		message.innerText = `${playerSelection} beats ${computerSelection}.`;
-		usrScore.innerText = player += 1
+		usrScore.innerText = player += 1;
 	}
 	else if (playerSelection === "rock" && computerSelection === "paper") {
 		rdResult.innerText = 'You Lose!';
 		message.innerText = `${computerSelection} beats ${playerSelection}.`;
-		cptScore.innerText = ai += 1
+		cptScore.innerText = ai += 1;
 	}
 
 	// Scissors and paper
 	else if (playerSelection === "scissors" && computerSelection === "paper") {
 		rdResult.innerText = 'You Win!';
 		message.innerText = `${playerSelection} beats ${computerSelection}.`;
-		usrScore.innerText = player += 1
+		usrScore.innerText = player += 1;
 	}
 	else if (playerSelection === "paper" && computerSelection === "scissors") {
 		rdResult.innerText = 'You Lose!';
 		message.innerText = `${computerSelection} beats ${playerSelection}.`;
-		cptScore.innerText = ai += 1
+		cptScore.innerText = ai += 1;
 	}
 
 	// Draw
@@ -123,7 +124,7 @@ function game() {
 		ai = 0;
 		cptScore.innerText = ai;
 		usrScore.innerText = player;
-		return
+		return;
 	}
 	
 	else if (player > 4) {
@@ -135,14 +136,14 @@ function game() {
 		ai = 0;
 		cptScore.innerText = ai;
 		usrScore.innerText = player;
-		return
+		return;
 	}
 
 }
 
+// Hides the play-again menu button
 function hideMenu() {
 	revealBtn.style.display = 'none';
 }
 
-revealBtn.style.display = 'none'
-
+revealBtn.style.display = 'none';
