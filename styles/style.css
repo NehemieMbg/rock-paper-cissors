@@ -1,9 +1,11 @@
 body {
 	background-color: #292727;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* flex-direction: column; */
+	padding: 0;
+	margin: 0;
 }
 
 html, body {
@@ -11,10 +13,12 @@ html, body {
 	height: 100%;
 }
 
+/* ------------- Titles ------------- */
+
 .title {
 	color: #f2f2f2;
 	font-family: 'Anton', sans-serif;
-	font-size: 60px;
+	font-size: 50px;
 	letter-spacing: 4px;
 	text-align: center;
 	padding-top: 0;
@@ -32,83 +36,17 @@ html, body {
 	margin-bottom: 24px;
 }
 
+.five {
+	color: white;
+}
+
+/* ------------- Score Panel ------------- */
+
 .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-.hidden-content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.reveal-btn {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	background-color: #121111;
-	width: 100%;
-	height: 100%;
-	border-radius: 8px;
-	/* display: absolute; */
-}
-
-.reveal-btn h2 {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 50px;
-	margin-top: 0;
-	color: white;
-}
-
-.reveal-btn button {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 40px;
-	font-weight: bold;
-	color: #292727;
-	margin: 0;
-	padding: 8px 16px;
-	border-radius: 8px;
-	background-color: orange;
-	border: none;
-}
-
-.reveal-btn button:hover {
-	opacity: calc(80%);
-}
-
-.rock button, .paper button, .scissors button {
-	background: none;
-	border-style: none;
-	font-size: 100px;
-	transition: transform .1s; /* Animation */
-}
-
-button:hover {
-	transform: scale(1.1);
-	cursor: pointer;
-}
-
-.btn {
-	display: flex;
-	justify-content: space-around;
-	gap: 80px;
-	width: 400px;
-	margin-bottom: 40px;
-}
-
-.rock h3, .paper h3, .scissors h3 {
-	color: white;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 25px;
-	text-align: center;
-	padding: 0;
-	margin: 0;
 }
 
 .message {
@@ -127,7 +65,7 @@ button:hover {
 	flex-direction: column;
 	background-color: #292727;
 	padding: 16px;
-	max-width: 500px;
+	max-width: 350px;
 	height: 200px;
 	border: 3px rgba(255, 255, 255, 0.844) solid;
 	border-radius: 8px;
@@ -151,7 +89,6 @@ button:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	/* gap: 90px; */
 	padding: 4px 30px;
 	margin: 0;
 }
@@ -193,17 +130,49 @@ button:hover {
 	padding-left: 20px;
 }
 
-.five {
-	color: white;
-}
-
 .round-result {
 	text-align: center;
 }
 
+/* ------------- User choice ------------- */
+
+.rock button, .paper button, .scissors button {
+	background: none;
+	border-style: none;
+	font-size: 100px;
+	transition: transform .1s; /* Animation */
+}
+
+button:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.btn {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	max-width: 600px;
+	margin-bottom: 40px;
+}
+
+.rock h3, .paper h3, .scissors h3 {
+	color: white;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 25px;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+
+/* ------------- Footer ------------- */
+
 .footer {
 	position: fixed;
 	bottom: 0;
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 	width: 100%;
 	left: 0;
@@ -221,4 +190,39 @@ button:hover {
 	text-decoration: none;
 	color: white;
 	font-weight: 600;
+}
+/* ------------- Hidden Restart Menu ------------- */
+
+.reveal-btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: #121111;
+	width: 100%;
+	height: 100%;
+}
+
+.reveal-btn h2 {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 35px;
+	margin-top: 0;
+	color: white;
+}
+
+.reveal-btn button {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 23px;
+	font-weight: bold;
+	color: #292727;
+	margin: 0;
+	padding: 8px 16px;
+	border-radius: 8px;
+	background-color: orange;
+	border: none;
+}
+
+.reveal-btn button:hover {
+	opacity: calc(80%);
 }
