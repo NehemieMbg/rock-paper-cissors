@@ -21,7 +21,7 @@ html, body {
 }
 
 .round {
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: orange;
 	font-size: 38px;
 	text-align: center;
@@ -59,14 +59,14 @@ html, body {
 }
 
 .reveal-btn h2 {
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 50px;
 	margin-top: 0;
 	color: white;
 }
 
 .reveal-btn button {
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 40px;
 	font-weight: bold;
 	color: #292727;
@@ -103,7 +103,7 @@ button:hover {
 
 .rock h3, .paper h3, .scissors h3 {
 	color: white;
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 25px;
 	text-align: center;
 	padding: 0;
@@ -112,7 +112,7 @@ button:hover {
 
 .message {
 	color: white;
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 22px;
 	text-align: center;
 	margin: 0;
@@ -134,7 +134,7 @@ button:hover {
 }
 
 .score-title {
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: #292727;
 	background-color: orange;
 	text-align: center;
@@ -163,7 +163,7 @@ button:hover {
 }
 
 .round-result h3 {
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	color: white;
 	font-size: 35px;
 	padding: 0;
@@ -178,7 +178,7 @@ button:hover {
 }
 
 .user-score, .computer-score {
-	font-family: Yanone Kaffeesatz;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 35px;
 	line-height: 50px;
 	color: white;
