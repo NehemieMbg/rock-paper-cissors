@@ -6,49 +6,56 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Rock Paper Scissors</title>
 	<link rel="stylesheet" href="./styles/style.css">
+	<link rel="icon" type="image/x-icon" href="./images/orange-color.png">
 	<script src="./script.js"
 	defer></script>
 </head>
 <body>
 	<div class="container">
-		<h1 class="title">Rock Paper Scissors</h1>
-		<h2 class="round">First to score <span class="five">5</span> points wins the game!</h2>
-		<div class="score-panel">
-			<div class="track-score">
-				<h3 class="user-score">You<br><span class="usr-score">0</span></h3>
-				<h3 class="score-title">SCORE</h3>
-				<h3 class="computer-score">Computer<br><span class="cpt-score">0</span></h3>
-			</div>
-			<div class="choices-result">
-				<div class="user">
-					<h3 class="player-choice"></h3>
+		<div class="hidden-content">
+			<h1 class="title">Rock Paper Scissors</h1>
+			<h2 class="round">First to score <span class="five">5</span> points wins the game!</h2>
+			<div class="score-panel">
+				<div class="track-score">
+					<h3 class="user-score">You<br><span class="usr-score">0</span></h3>
+					<h3 class="score-title">SCORE</h3>
+					<h3 class="computer-score">Computer<br><span class="cpt-score">0</span></h3>
 				</div>
-				<div class="round-result">
-					<h3 class="rd-result">Pick Something <br>to start the game</h3>
+				<div class="choices-result">
+					<div class="user">
+						<h3 class="player-choice"></h3>
+					</div>
+					<div class="round-result">
+						<h3 class="rd-result">Pick Something <br>to start the game</h3>
+					</div>
+					<div class="computer">
+						<h3 class="computer-choice"></h3>
+					</div>
 				</div>
-				<div class="computer">
-					<h3 class="computer-choice"></h3>
+				<h3 class="message">...</h3>
+			</div>
+			<div class="btn">
+				<div class="rock">
+					<button class="rock">👊</button>
+					<h3>Rock</h3>
 				</div>
-			</div>
-			<h3 class="message">...</h3>
-		</div>
-		<div class="btn">
-			<div class="rock">
-				<button class="rock">👊</button>
-				<h3>Rock</h3>
-			</div>
-			<div class="paper">
-				<button class="paper">🖐</button>
-				<h3>Paper</h3>
-			</div>
-			<div class="scissors">
-				<button class="scissors">✌️</button>
-				<h3>Scissors</h3>
+				<div class="paper">
+					<button class="paper">🖐</button>
+					<h3>Paper</h3>
+				</div>
+				<div class="scissors">
+					<button class="scissors">✌️</button>
+					<h3>Scissors</h3>
+				</div>
 			</div>
 		</div>
 	</div>
 	<footer class="footer">
 		<p>Copyright © <script> document.write(new Date().getFullYear()) </script> <a href="https://github.com/NehemieMbg" class="github">NehemieMbg</a></p>
 	</footer>
+	<div class="reveal-btn">
+		<h2 class="end-message">You have won!</h2>
+		<button class="restart-btn">Play Again</button>
+	</div>
 </body>
 </html>

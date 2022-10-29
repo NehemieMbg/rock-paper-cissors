@@ -5,12 +5,17 @@ const playerChoice = document.querySelector('.player-choice');
 const cptChoice = document.querySelector('.computer-choice');
 let usrScore = document.querySelector('.usr-score');
 let cptScore = document.querySelector('.cpt-score');
+const restart = document.querySelector('.restart-btn')
+const revealBtn = document.querySelector('.reveal-btn')
+const endMessage = document.querySelector('.end-message')
 
 let result;
 let computerChoice;
 let userSelection;
 let player = 0;
 let ai = 0;
+
+restart.addEventListener('click', hideMenu);
 
 // Start the game a soon as the user click on a button
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
@@ -26,6 +31,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 		}
 	}
 
+	waitingToPlay()
 	getComputerChoice();
 	playRound();
 	game();
@@ -105,18 +111,38 @@ function playRound(playerSelection, computerSelection) {
 function game() {
 
 	if (ai === 5) {
-		rdResult.innerText = "You have lost!";
+		rdResult.innerText = '';
+		endMessage.innerText = "You have lost...";
+		revealBtn.style.display = '';
 		player = 0;
 		ai = 0;
 		cptScore.innerText = ai;
 		usrScore.innerText = player;
-		return;
+		return
 	} else if (player === 5) {
-		rdResult.innerText = "You have won!";
+		rdResult.innerText = '';
+		endMessage.innerText = "You have won!";
+		revealBtn.style.display = '';
 		player = 0;
 		ai = 0;
 		cptScore.innerText = ai;
 		usrScore.innerText = player;
-		return;
+		return
+	}
+
+}
+
+function hideMenu() {
+	revealBtn.style.display = 'none';
+}
+
+revealBtn.style.display = 'none'
+
+function waitingToPlay() {
+	if (player === 0 && ai === 0){
+		rdResult.innerText = 'Choose You Weapon';
+		message.innerText = '⌄'
 	}
 }
+
+waitingToPlay()
