@@ -15,7 +15,11 @@ let userSelection;
 let player = 0;
 let ai = 0;
 
-restart.addEventListener('click', hideMenu);
+function reloadPage() {
+	location.reload()
+}
+restart.addEventListener('click', reloadPage);
+
 
 // Start the game a soon as the user click on a button
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
@@ -31,7 +35,6 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
 		}
 	}
 
-	waitingToPlay()
 	getComputerChoice();
 	playRound();
 	game();
@@ -99,19 +102,21 @@ function playRound(playerSelection, computerSelection) {
 	}
 
 	// Draw
-	else {
+	else if (playerSelection == computerSelection) {
 		rdResult.innerText = "Tie!";
 		message.innerText = "nobody wins.";
 		return;
 	}
+	return;
 }
 
 // Initialize to 0 at the end of the game
 // Resets the game
 function game() {
 
-	if (ai === 5) {
+	if (ai > 4) {
 		rdResult.innerText = '';
+		message.innerText = '⌄';
 		endMessage.innerText = "You have lost...";
 		revealBtn.style.display = '';
 		player = 0;
@@ -119,8 +124,11 @@ function game() {
 		cptScore.innerText = ai;
 		usrScore.innerText = player;
 		return
-	} else if (player === 5) {
+	}
+	
+	else if (player > 4) {
 		rdResult.innerText = '';
+		message.innerText = '⌄';
 		endMessage.innerText = "You have won!";
 		revealBtn.style.display = '';
 		player = 0;
@@ -138,11 +146,3 @@ function hideMenu() {
 
 revealBtn.style.display = 'none'
 
-function waitingToPlay() {
-	if (player === 0 && ai === 0){
-		rdResult.innerText = 'Choose You Weapon';
-		message.innerText = '⌄'
-	}
-}
-
-waitingToPlay()
